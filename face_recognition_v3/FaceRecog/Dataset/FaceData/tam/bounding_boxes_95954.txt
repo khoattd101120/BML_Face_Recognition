@@ -1,0 +1,154 @@
+Dataset\FaceData\processed\biden\biden2.png 416 161 898 774
+Dataset\FaceData\processed\biden\biden.png 406 182 719 577
+Dataset\FaceData\processed\congthanh.96\2018-12-23_12-28-57_UTC_profile_pic.png 155 85 216 154
+Dataset\FaceData\processed\obama\obama2.png 175 237 477 620
+Dataset\FaceData\processed\obama\obama.png 356 87 631 425
+Dataset\FaceData\processed\_ha_long_\2019-10-14_01-18-55_UTC_profile_pic.png 111 23 193 118
+Dataset\FaceData\processed\_ha_long_\2019-03-09_07-17-55_UTC.png 465 282 559 391
+Dataset\FaceData\processed\kit_harington\john1.png 671 69 819 246
+Dataset\FaceData\processed\kit_harington\john2.png 300 62 488 296
+Dataset\FaceData\processed\diepsuong3110\2017-06-10_06-08-25_UTC.png
+Dataset\FaceData\processed\bachien.73\2020-02-15_14-27-38_UTC.png 273 288 790 991
+Dataset\FaceData\processed\bachien.73\2020-02-15_14-30-33_UTC.png 466 560 568 679
+Dataset\FaceData\processed\bachien.73\2020-10-18_13-54-48_UTC_profile_pic.png 61 27 212 208
+Dataset\FaceData\processed\bachien.73\2020-11-15_10-44-17_UTC.png 674 289 803 442
+Dataset\FaceData\processed\bachien.73\2020-11-17_10-00-16_UTC.png 606 242 907 639
+Dataset\FaceData\processed\bachien.73\2020-11-25_15-27-51_UTC_1.png 509 56 598 162
+Dataset\FaceData\processed\bachien.73\2020-11-25_15-27-51_UTC_2.png 280 505 339 571
+Dataset\FaceData\processed\bachien.73\2020-12-04_10-52-26_UTC.png 155 0 325 189
+Dataset\FaceData\processed\baongoc272\2020-11-25_06-45-17_UTC_2.png 475 323 734 633
+Dataset\FaceData\processed\baongoc272\2020-09-28_03-03-06_UTC.png 478 412 543 491
+Dataset\FaceData\processed\baongoc272\2020-12-13_05-06-48_UTC_1.png
+Dataset\FaceData\processed\baongoc272\2020-10-16_02-55-37_UTC.png
+Dataset\FaceData\processed\baongoc272\2020-12-13_05-06-48_UTC_2.png 738 556 898 750
+Dataset\FaceData\processed\baongoc272\2020-12-13_02-48-36_UTC_profile_pic.png 154 131 217 201
+Dataset\FaceData\processed\baongoc272\2020-10-01_02-06-49_UTC_2.png 633 416 808 645
+Dataset\FaceData\processed\baongoc272\2020-11-01_02-04-05_UTC_1.png 419 766 549 929
+Dataset\FaceData\processed\baongoc272\2020-10-23_02-55-10_UTC_1.png 546 485 633 592
+Dataset\FaceData\processed\baongoc272\2020-10-01_02-06-49_UTC_1.png 480 712 583 839
+Dataset\FaceData\processed\baongoc272\2020-11-25_06-45-17_UTC_1.png 411 733 555 917
+Dataset\FaceData\processed\baongoc272\2020-11-03_05-01-04_UTC.png 440 739 566 889
+Dataset\FaceData\processed\baongoc272\2020-10-23_02-55-10_UTC_2.png 550 471 636 591
+Dataset\FaceData\processed\Hanh_Cute\MicrosoftTeams-image (21).png 128 72 183 134
+Dataset\FaceData\processed\Hanh_Cute\MicrosoftTeams-image (18).png 99 96 153 158
+Dataset\FaceData\processed\Hanh_Cute\MicrosoftTeams-image (17).png 149 80 205 143
+Dataset\FaceData\processed\Hanh_Cute\MicrosoftTeams-image (20).png 132 88 179 138
+Dataset\FaceData\processed\299601_min\2020-12-08_03-07-36_UTC_profile_pic.png 88 45 256 252
+Dataset\FaceData\processed\Tin_Dep_Trai\69346283_1434371706730171_3440679518933614592_o.png 1304 474 1833 1136
+Dataset\FaceData\processed\Tin_Dep_Trai\95476640_1668297020004304_589506376162607104_o.png 914 511 1023 640
+Dataset\FaceData\processed\Tin_Dep_Trai\109879650_1747559542078051_1013148634681401790_o.png 523 208 783 529
+Dataset\FaceData\processed\Tin_Dep_Trai\fs.png 589 594 770 800
+Dataset\FaceData\processed\Tin_Dep_Trai\78838735_1522872851213389_4069678291181633536_o.png 1207 378 1628 859
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image.png 335 677 1632 2288
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (11).png 253 701 1515 2222
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (1).png
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (13).png 455 851 1509 2173
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (8).png 253 701 1515 2222
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (6).png
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (2).png 349 504 1825 2298
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (9).png 328 694 1559 2247
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (4).png 528 691 1458 1807
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (3).png
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (12).png 328 694 1559 2247
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (14).png 488 837 1583 2205
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (5).png 679 712 1744 2001
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (7).png
+Dataset\FaceData\processed\Duy_Nguyen\MicrosoftTeams-image (10).png 679 712 1744 2001
+Dataset\FaceData\processed\rose_leslie\img1.png 607 47 876 396
+Dataset\FaceData\processed\rose_leslie\img2.png 160 104 439 468
+Dataset\FaceData\processed\annababy_d\2020-12-07_09-29-39_UTC_profile_pic.png
+Dataset\FaceData\processed\annababy_d\2020-12-16_12-22-39_UTC.png 337 160 684 601
+Dataset\FaceData\processed\annababy_d\2020-12-19_07-50-00_UTC.png 308 238 467 429
+Dataset\FaceData\processed\annababy_d\2020-12-14_08-55-19_UTC.png 690 437 800 576
+Dataset\FaceData\processed\annababy_d\2020-12-18_09-08-39_UTC.png 392 49 527 211
+Dataset\FaceData\processed\annababy_d\2020-12-12_11-27-23_UTC.png 547 394 696 581
+Dataset\FaceData\processed\alexa_vndj\2020-09-17_07-31-48_UTC.png 450 297 623 533
+Dataset\FaceData\processed\alexa_vndj\2020-08-28_11-37-03_UTC_1.png 271 133 773 729
+Dataset\FaceData\processed\alexa_vndj\2020-10-11_11-07-03_UTC.png 685 333 789 468
+Dataset\FaceData\processed\alexa_vndj\2020-09-06_15-34-56_UTC.png 488 198 604 340
+Dataset\FaceData\processed\alexa_vndj\2020-10-29_11-56-37_UTC.png 591 195 734 365
+Dataset\FaceData\processed\alexa_vndj\2020-08-21_12-39-28_UTC_1.png 303 40 808 677
+Dataset\FaceData\processed\alexa_vndj\2020-08-21_12-39-28_UTC_2.png 345 12 848 667
+Dataset\FaceData\processed\alexa_vndj\2020-09-11_08-40-57_UTC.png 432 56 671 329
+Dataset\FaceData\processed\alexa_vndj\2020-09-26_06-48-08_UTC.png 558 241 659 370
+Dataset\FaceData\processed\alexa_vndj\2020-12-09_13-50-20_UTC.png 512 240 677 446
+Dataset\FaceData\processed\alexa_vndj\2020-08-28_11-37-03_UTC_2.png 296 122 760 698
+Dataset\FaceData\processed\alexa_vndj\2020-08-28_11-37-03_UTC_3.png 241 0 719 609
+Dataset\FaceData\processed\_pat204_\2020-07-15_10-44-22_UTC_profile_pic.png
+Dataset\FaceData\processed\Binh_Lee\048f7c7ffbf90aa753e8.png 108 599 519 1111
+Dataset\FaceData\processed\Binh_Lee\5d5dd83c59baa8e4f1ab.png 187 569 545 1035
+Dataset\FaceData\processed\Binh_Lee\6121f2d77251830fda40.png 197 580 523 969
+Dataset\FaceData\processed\Binh_Lee\704d4a19cb9f3ac1638e.png 136 600 498 1059
+Dataset\FaceData\processed\Binh_Lee\aea8fc427cc48d9ad4d5.png 96 700 512 1225
+Dataset\FaceData\processed\Binh_Lee\cded5b42dcc42d9a74d5.png 153 506 527 993
+Dataset\FaceData\processed\Binh_Lee\e85851aad12c2072793d.png 152 531 521 995
+Dataset\FaceData\processed\Binh_Lee\fefa19f59973682d3162.png 120 661 531 1178
+Dataset\FaceData\processed\chaubui_\2020-12-11_15-19-05_UTC_1.png 592 421 711 568
+Dataset\FaceData\processed\chaubui_\2020-12-11_15-19-05_UTC_2.png 529 209 679 394
+Dataset\FaceData\processed\chaubui_\2020-12-11_15-19-05_UTC_3.png 361 163 486 318
+Dataset\FaceData\processed\chaubui_\2020-12-12_04-34-07_UTC.png 303 188 455 375
+Dataset\FaceData\processed\chaubui_\2020-12-13_06-59-13_UTC_2.png 251 352 528 681
+Dataset\FaceData\processed\chaubui_\2020-12-13_06-59-13_UTC_6.png 225 462 511 881
+Dataset\FaceData\processed\chaubui_\2020-12-14_08-20-07_UTC_2.png
+Dataset\FaceData\processed\chaubui_\2020-12-14_08-20-07_UTC_3.png 178 155 439 483
+Dataset\FaceData\processed\chaubui_\2020-12-16_12-32-27_UTC_2.png 502 455 648 621
+Dataset\FaceData\processed\chaubui_\2020-12-17_15-34-10_UTC_1.png 109 142 842 1062
+Dataset\FaceData\processed\chaubui_\2020-12-17_15-34-10_UTC_2.png 39 43 845 1056
+Dataset\FaceData\processed\chaubui_\2020-12-19_09-19-14_UTC_3.png 349 54 512 246
+Dataset\FaceData\processed\chaubui_\2020-12-19_13-06-44_UTC_1.png 462 167 777 522
+Dataset\FaceData\processed\chaubui_\2020-12-19_13-06-44_UTC_2.png 467 119 663 358
+Dataset\FaceData\processed\alex_lacamoire\img1.png 275 127 599 552
+Dataset\FaceData\processed\anhdao7240\2018-11-16_08-15-29_UTC_profile_pic.png
+Dataset\FaceData\processed\chmcharm\2020-11-21_14-09-04_UTC.png 571 137 749 367
+Dataset\FaceData\processed\chmcharm\2020-11-19_05-32-40_UTC_4.png 221 0 1078 1018
+Dataset\FaceData\processed\chmcharm\2020-10-30_13-36-58_UTC.png 319 215 456 385
+Dataset\FaceData\processed\chmcharm\2020-10-28_17-21-27_UTC_profile_pic.png 114 36 223 157
+Dataset\FaceData\processed\chmcharm\2020-11-21_09-28-41_UTC_2.png 361 232 677 615
+Dataset\FaceData\processed\chmcharm\2020-10-28_17-12-01_UTC.png 720 74 877 250
+Dataset\FaceData\processed\chmcharm\2020-11-16_05-47-24_UTC_1.png 309 750 421 894
+Dataset\FaceData\processed\buikhanhha_\2020-12-07_12-49-05_UTC.png 354 235 555 489
+Dataset\FaceData\processed\buikhanhha_\2020-10-26_15-22-25_UTC_3.png 327 71 556 357
+Dataset\FaceData\processed\buikhanhha_\2020-10-29_08-59-53_UTC_4.png 264 92 809 815
+Dataset\FaceData\processed\buikhanhha_\2020-10-26_15-22-25_UTC_2.png 409 94 641 378
+Dataset\FaceData\processed\buikhanhha_\2020-09-20_16-58-41_UTC_2.png 358 34 594 354
+Dataset\FaceData\processed\buikhanhha_\2020-10-29_08-59-53_UTC_5.png 246 106 780 818
+Dataset\FaceData\processed\buikhanhha_\2020-09-23_08-36-44_UTC_1.png 834 533 909 617
+Dataset\FaceData\processed\buikhanhha_\2020-10-26_15-22-25_UTC_1.png 702 195 903 448
+Dataset\FaceData\processed\buikhanhha_\2020-10-29_08-59-53_UTC_3.png 379 103 918 833
+Dataset\FaceData\processed\buikhanhha_\2020-10-15_17-03-35_UTC.png 176 309 547 753
+Dataset\FaceData\processed\buikhanhha_\2020-09-20_16-58-41_UTC_1.png 384 54 614 356
+Dataset\FaceData\processed\buikhanhha_\2020-10-29_08-59-53_UTC_1.png 181 32 687 734
+Dataset\FaceData\processed\buikhanhha_\2020-10-29_08-59-53_UTC_2.png 316 221 880 978
+Dataset\FaceData\processed\buikhanhha_\2020-10-29_15-16-59_UTC_profile_pic.png 48 37 272 318
+Dataset\FaceData\processed\buikhanhha_\2020-09-23_08-36-44_UTC_3.png 436 214 642 450
+Dataset\FaceData\processed\buikhanhha_\2020-09-23_08-36-44_UTC_6.png 818 651 945 795
+Dataset\FaceData\processed\di_yeu_con\2015-09-24_07-28-30_UTC_profile_pic.png 32 9 133 126
+Dataset\FaceData\processed\di_yeu_con\2017-04-01_14-16-19_UTC.png 517 146 731 401
+Dataset\FaceData\processed\chitay0509\2016-05-20_04-15-16_UTC.png 140 17 436 365
+Dataset\FaceData\processed\chitay0509\2016-05-16_09-12-07_UTC.png 0 0 571 625
+Dataset\FaceData\processed\chitay0509\2016-05-20_04-13-50_UTC.png 250 141 413 349
+Dataset\FaceData\processed\chitay0509\2016-05-17_04-28-06_UTC.png 177 66 452 410
+Dataset\FaceData\processed\chitay0509\2016-07-07_01-45-20_UTC.png 296 345 497 596
+Dataset\FaceData\processed\chitay0509\2016-07-14_19-26-11_UTC_profile_pic.png 94 84 186 194
+Dataset\FaceData\processed\anhduy060719\2016-08-19_05-01-21_UTC.png
+Dataset\FaceData\processed\anhduy060719\2016-08-11_16-01-26_UTC_profile_pic.png 170 29 231 101
+Dataset\FaceData\processed\dangmyduyen_171297\2018-12-03_15-43-34_UTC.png 596 445 679 548
+Dataset\FaceData\processed\dangmyduyen_171297\2019-01-20_11-28-51_UTC_profile_pic.png 163 48 239 133
+Dataset\FaceData\processed\bonbon.183\2018-12-16_04-17-46_UTC.png 523 82 646 230
+Dataset\FaceData\processed\bonbon.183\2016-06-29_08-29-57_UTC.png 457 370 586 530
+Dataset\FaceData\processed\bonbon.183\2019-08-27_03-44-18_UTC.png 572 445 658 543
+Dataset\FaceData\processed\boubou.98\2020-12-17_09-10-07_UTC_2.png 383 30 585 284
+Dataset\FaceData\processed\boubou.98\2020-12-17_09-10-07_UTC_4.png 434 0 621 222
+Dataset\FaceData\processed\boubou.98\2020-12-17_09-10-07_UTC_6.png 347 46 536 299
+Dataset\FaceData\processed\boubou.98\2020-12-17_09-10-07_UTC_1.png
+Dataset\FaceData\processed\boubou.98\2020-12-17_09-10-07_UTC_5.png
+Dataset\FaceData\processed\boubou.98\2020-12-17_09-10-07_UTC_3.png 361 35 578 306
+Dataset\FaceData\processed\baotram.huynh\2020-11-16_01-35-44_UTC_profile_pic.png 173 99 251 192
+Dataset\FaceData\processed\chuottip_211\2018-10-06_15-41-16_UTC_profile_pic.png
+Dataset\FaceData\processed\boconganh141\2020-11-07_14-28-09_UTC_profile_pic.png 42 0 221 214
+Dataset\FaceData\processed\don.don527\2020-07-04_02-24-05_UTC_2.png 333 220 611 578
+Dataset\FaceData\processed\don.don527\2020-01-11_16-40-39_UTC.png 498 594 753 921
+Dataset\FaceData\processed\don.don527\2020-06-04_00-35-34_UTC.png 356 399 768 942
+Dataset\FaceData\processed\don.don527\2020-04-22_00-24-19_UTC.png 466 276 724 602
+Dataset\FaceData\processed\don.don527\2020-02-09_04-07-35_UTC.png 405 248 702 609
+Dataset\FaceData\processed\don.don527\2019-07-22_04-14-37_UTC_profile_pic.png 68 11 288 305

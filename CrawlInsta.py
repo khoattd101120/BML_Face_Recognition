@@ -1,18 +1,25 @@
 import os
 import glob
+<<<<<<< HEAD
 import dlib
 import cv2
 import re
 import numpy as np
+=======
+
+
+>>>>>>> 6ff77d87ccc332a5da788d09d1e89d7eafe869d7
 class CrawlInsta:
     def __init__(self):
-        self.root = os.getcwd()
+        # self.root = os.getcwd()
+        self.root = r'C:\Users\tinnvt\Documents\BasicML\Project\Face Recognition\BML_Face_Recognition'
         self.path = os.path.join(self.root, 'images')
         self.face_detector = dlib.get_frontal_face_detector()
         if not os.path.exists(self.path):
             os.makedirs(self.path)
         # change the current working directory
         os.chdir(self.path)
+<<<<<<< HEAD
     def load_image(self, name, update = True):
         try:
             if update:
@@ -23,10 +30,22 @@ class CrawlInsta:
                 --no-metadata-json --no-compress-json --count 100 {} '.format(name))
         except:
             pass
+=======
+
+    def load_image(self, name, update=True):
+        if update:
+            os.system('instaloader --fast-update --no-video-thumbnails --no-videos --no-captions \
+            --no-metadata-json --no-compress-json {}'.format(name))
+        else:
+            os.system('instaloader --no-video-thumbnails --no-videos --no-captions \
+            --no-metadata-json --no-compress-json {} '.format(name))
+>>>>>>> 6ff77d87ccc332a5da788d09d1e89d7eafe869d7
         self.remove_redundant(name)
-    def load_images(self, names, update = True):
+
+    def load_images(self, names, update=True):
         for name in names:
             self.load_image(name, update)
+
     def remove_redundant(self, folder):
         # rename path contain space to _
         # tmp1 = os.path.join(self.path, folder)
@@ -35,6 +54,7 @@ class CrawlInsta:
         for redundant in glob.glob(os.path.join(self.path, folder, '*.*')):
             if not (redundant.endswith('.jpg') or redundant.endswith('.png')):
                 os.remove(redundant)
+<<<<<<< HEAD
             else: # remove image not contains face
                 img = cv2.imread(redundant)
                 # print(img)
@@ -130,3 +150,18 @@ if __name__ == '__main__':
               'ngoctrinh89']
     # crawler.load_image('taylorswift', update = True)
     crawler.load_images(arr_acc, update=True)
+=======
+        if os.path.exists(os.path.join(self.path, folder, 'id')):
+            os.remove(os.path.join(self.path, folder, 'id'))
+
+
+if __name__ == '__main__':
+    # crawler.load_image('taylorswift', update=False)
+    user_files = open(r"C:\Users\tinnvt\Documents\BasicML\Project\Face "
+                      r"Recognition\BML_Face_Recognition\file_crawled.txt", "r")
+    lines = user_files.readlines()
+    for line in lines:
+        crawler = CrawlInsta()
+        crawler.load_image(line, update=False)
+
+>>>>>>> 6ff77d87ccc332a5da788d09d1e89d7eafe869d7
