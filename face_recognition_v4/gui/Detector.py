@@ -26,7 +26,7 @@ def main_app(name, recognizer):
 
                 name = recognizer.labels_unique[id]
                 confidence = proba[id]
-                # pred = 0
+
                 if confidence > 0.1:
                     text = name.upper()
                     font = cv2.FONT_HERSHEY_PLAIN
@@ -34,7 +34,6 @@ def main_app(name, recognizer):
                     frame = cv2.putText(frame, text, (x, y-4), font, 1, (0, 255, 0), 1, cv2.LINE_AA)
 
                 else:
-                    pred += -1
                     text = "UnknownFace"
                     font = cv2.FONT_HERSHEY_PLAIN
                     frame = cv2.rectangle(frame, (x, y), (w, h), (0, 0, 255), 2)
