@@ -20,6 +20,7 @@ class MainUI(tk.Tk):
 
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
+        self.configure(bg="#ffffff")
         global names
         with open("nameslist.txt", "r") as f:
             x = f.read()
@@ -65,13 +66,15 @@ class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        self.configure(bg="#ffffff")
         # load = Image.open("homepagepic.png")
         # load = load.resize((250, 250), Image.ANTIALIAS)
         render = PhotoImage(file='homepagepic.png')
         img = tk.Label(self, image=render)
         img.image = render
         img.grid(row=0, column=1, rowspan=4, sticky="nsew")
-        label = tk.Label(self, text="        Home Page        ", font=self.controller.title_font, fg="#263942")
+        label = tk.Label(self, text="        Home Page        ", font=self.controller.title_font, fg="#263942",
+                         bg="#ffffff")
         label.grid(row=0, sticky="ew")
         button1 = tk.Button(self, text="   Add a User  ", fg="#ffffff", bg="#263942",
                             command=lambda: self.controller.show_frame("PageOne"))
