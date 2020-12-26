@@ -1,5 +1,4 @@
 import sys
-import cv2
 
 sys.path.append(r'..\src')
 sys.path.append(r'..\insightface\deploy')
@@ -12,6 +11,7 @@ from tkinter import font as tkfont
 from tkinter import messagebox, PhotoImage
 from Detector import main_app
 from CaptureFace import *
+from GUI_TrainFeature import *
 
 names = set()
 
@@ -26,15 +26,14 @@ class MainUI(tk.Tk):
             z = x.rstrip().split(" ")
             for i in z:
                 names.add(i)
-        self.configure(bg='#ffffff')
         self.title_font = tkfont.Font(family='Helvetica', size=16, weight="bold")
-        self.title("VinBDI Face Recognizer")
+        self.title("Face Recognizer")
         self.resizable(False, False)
         self.geometry("500x250")
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
-        self.recognizer = CreateClassifier()
+        self.recognizer = CreateClassifier(embedding_path='../src/outputs/embeddings_duy_full.pickle')
         self.active_name = None
-
+        self.num_of_images = 0
         container = tk.Frame(self)
         container.grid(sticky="nsew")
         container.grid_rowconfigure(0, weight=1)
@@ -66,14 +65,13 @@ class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        self.configure(bg='#ffffff')
-        # render = PhotoImage(file='homepagepic.png')
-        # render = cv2.resize(render, (256, 256))
+        # load = Image.open("homepagepic.png")
+        # load = load.resize((250, 250), Image.ANTIALIAS)
         render = PhotoImage(file='homepagepic.png')
         img = tk.Label(self, image=render)
         img.image = render
         img.grid(row=0, column=1, rowspan=4, sticky="nsew")
-        label = tk.Label(self, text="        Home Page        ", font=self.controller.title_font, fg="#263942", bg='#ffffff')
+        label = tk.Label(self, text="        Home Page        ", font=self.controller.title_font, fg="#263942")
         label.grid(row=0, sticky="ew")
         button1 = tk.Button(self, text="   Add a User  ", fg="#ffffff", bg="#263942",
                             command=lambda: self.controller.show_frame("PageOne"))
@@ -129,36 +127,6 @@ class PageOne(tk.Frame):
         self.controller.show_frame("PageThree")
 
 
-# class PageTwo(tk.Frame):
-#
-#     def __init__(self, parent, controller):
-#         tk.Frame.__init__(self, parent)
-#         global names
-#         self.controller = controller
-#         tk.Label(self, text="Select user", fg="#263942", font='Helvetica 12 bold').grid(row=0, column=0, padx=10, pady=10)
-#         self.buttoncanc = tk.Button(self, text="Cancel", command=lambda: controller.show_frame("StartPage"), bg="#ffffff", fg="#263942")
-#         self.menuvar = tk.StringVar(self)
-#         self.dropdown = tk.OptionMenu(self, self.menuvar, *names)
-#         self.dropdown.config(bg="lightgrey")
-#         self.dropdown["menu"].config(bg="lightgrey")
-#         self.buttonext = tk.Button(self, text="Next", command=self.nextfoo, fg="#ffffff", bg="#263942")
-#         self.dropdown.grid(row=0, column=1, ipadx=8, padx=10, pady=10)
-#         self.buttoncanc.grid(row=1, ipadx=5, ipady=4, column=0, pady=10)
-#         self.buttonext.grid(row=1, ipadx=5, ipady=4, column=1, pady=10)
-#
-#     def nextfoo(self):
-#         if self.menuvar.get() == "None":
-#             messagebox.showerror("ERROR", "Name cannot be 'None'")
-#             return
-#         self.controller.active_name = self.menuvar.get()
-#         self.controller.show_frame("PageFour")
-#
-#     def refresh_names(self):
-#         global names
-#         self.menuvar.set('')
-#         self.dropdown['menu'].delete(0, 'end')
-#         for name in names:
-#             self.dropdown['menu'].add_command(label=name, command=tk._setit(self.menuvar, name))
 class PageThree(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -179,10 +147,10 @@ class PageThree(tk.Frame):
         self.numimglabel.config(text=str("Number of images captured = " + str(x)))
 
     def trainmodel(self):
-        if self.controller.num_of_images < 300:
-            messagebox.showerror("ERROR", "No enough Data, Capture at least 300 images!")
-            return
-        train_classifer(self.controller.active_name)
+        # if self.controller.num_of_images < 10:
+        #     messagebox.showerror("ERROR", "No enough Data, Capture at least 300 images!")
+        #     return
+        train_classifer(self.controller.active_name, self.controller.recognizer)
         messagebox.showinfo("SUCCESS", "The modele has been successfully trained!")
         self.controller.show_frame("PageFour")
 
