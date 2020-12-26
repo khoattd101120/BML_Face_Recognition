@@ -5,13 +5,14 @@ import os
 import glob
 
 
-
 class FaceEmbedding:
     def __init__(self, face_model):
         self.face_model = face_model
         self.known_embeddings = []
         self.known_names = []
         self.root = os.getcwd()
+
+
     def embed_face(self, image):
         # Detect face
         input  = self.face_model.get_input(image)
@@ -43,10 +44,11 @@ class FaceEmbedding:
             # extract the person name from the image path
             print("[INFO] processing image {}/{}".format(i + 1, l))
 
-            name = img_path.split(os.path.sep)[-3]
+            name = img_path.split(os.path.sep)[-2]
             print(name)
             # load the image
             image = cv2.imread(img_path)
+
             embed_face = self.embed_face(image)
             if embed_face is None: #here
                 print('-----------------------{}'.format(name))
@@ -63,10 +65,14 @@ class FaceEmbedding:
         else:
             if embedding_path is None:
                 raise Exception("No embedding_path specific!")
-            if save == 1: # raplace
+            embedding_path = os.path.join(self.root, '../src', embedding_path)
+            if save == 1: # replace
                 self.save_pickle(data, embedding_path)
             elif save == 2:
                 if not os.path.exists(embedding_path):
+                    print(self.root)
+                    print(__name__, embedding_path)
+                    print(__name__, 'save 2, path not exists')
                     self.save_pickle(data, embedding_path)
                 else:
                     data = self.load_pickle(embedding_path)
@@ -75,10 +81,13 @@ class FaceEmbedding:
                     self.save_pickle(data, embedding_path)
         return data
     def save_pickle(self, data, embedding_path):
+        embedding_path = os.path.join(self.root, '../src',embedding_path)
+        print(embedding_path)
         f = open(embedding_path, "wb")
         f.write(pickle.dumps(data))
         f.close()
     def load_pickle(self,embedding_path):
+        embedding_path = os.path.join(self.root, '../src', embedding_path)
         if not os.path.exists(embedding_path):
             raise Exception("Embedding_path not exists! \n {}".format(embedding_path))
 
@@ -106,8 +115,10 @@ if __name__ == '__main__':
 
     # Test embed more image
 
-    img_paths = glob('../dataset/*/Train/*.jpg')
-    embeddings = face_embedding.embed_faces(img_paths, save = 1, embedding_path= 'outputs/embeddings_duy_new.pickle')
+    img_paths = glob('../dataset/*/*.*')
+    print(img_paths)
+    embeddings = face_embedding.embed_faces(img_paths, save = 1, embedding_path= 'outputs/embeddings.pickle')
 
-    # print(embeddings[0])
+    # Test cap image
+    # face_embedding.start_capture('a')
 

@@ -16,18 +16,41 @@ from FaceEmbedding import FaceEmbedding
 
 
 class CreateClassifier:
-	def __init__(self, embedding_path = '../src/outputs/embeddings_duy_new.pickle'):
-		self.args = Namespace(det=0, embeddings='../src/outputs/embeddings_duy_new.pickle', flip=0, ga_model='', gpu=0, image_size='112,112', model='../insightface/models/model-y1-test2/model,0', threshold=1.24)
+	def __init__(self, embedding_path = '../src/outputs/embeddings.pickle'):
+		self.args = Namespace(det=0, embeddings='../src/outputs/embeddings.pickle', flip=0, ga_model='', gpu=0, image_size='112,112', model='../insightface/models/model-y1-test2/model,0', threshold=1.24)
+		self.embedding_path = embedding_path
 		self.face_model = face_model.FaceModel(self.args)
 		self.face_embedding = FaceEmbedding(self.face_model)
-		self.data = self.face_embedding.load_pickle(embedding_path)
+		try:
+			self.data = self.face_embedding.load_pickle(embedding_path)
+			self.labels = self.data["names"]
+			self.embeddings = np.array(self.data["embeddings"])
+			self.num_classes = len(np.unique(self.labels))
+			self.labels_unique = np.unique(self.labels).tolist()
+			self.labels = [self.labels_unique.index(i) for i in self.labels]
+		except:
+			self.data = None
+			self.labels = []
+			self.embeddings = np.array([])
+			self.num_classes = None
+			self.labels_unique = np.array([])
+			self.labels = []
+
+		try:
+			self.model = self.face_embedding.load_pickle(r'..\src\outputs\knn_model.pickle')
+		except:
+			self.model = None
+	def update_data(self):
+		self.data = self.face_embedding.load_pickle(self.embedding_path)
 		self.labels = self.data["names"]
 		self.embeddings = np.array(self.data["embeddings"])
 		self.num_classes = len(np.unique(self.labels))
 		self.labels_unique = np.unique(self.labels).tolist()
 		self.labels = [self.labels_unique.index(i) for i in self.labels]
 	def train(self, classifier = 'svm'):
-		x_train, x_test, y_train, y_test = train_test_split(self.embeddings, self.labels, test_size=0.3)
+		x_train, x_test, y_train, y_test = train_test_split(self.embeddings, self.labels, stratify= self.labels, test_size=0.3)
+		print(x_train.shape)
+		print(x_test.shape)
 		if classifier == 'svm':
 			model = SVC(C = 10000, gamma= 0.01, probability=True)
 			model.fit(x_train, y_train)
@@ -37,6 +60,7 @@ class CreateClassifier:
 			model.fit(x_train, y_train)
 			print('score', model.score(x_test, y_test))
 		self.face_embedding.save_pickle(model, 'outputs/{}_model.pickle'.format(classifier))
+		self.model = model
 		return model
 	def test(self):
 		img_path = [

@@ -10,6 +10,7 @@ from tkinter import font as tkfont
 from tkinter import messagebox,PhotoImage
 from Detector import main_app
 from CaptureFace import *
+from GUI_TrainFeature import *
 names = set()
 
 
@@ -28,9 +29,9 @@ class MainUI(tk.Tk):
         self.resizable(False, False)
         self.geometry("500x250")
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
-        self.recognizer = CreateClassifier()
+        self.recognizer = CreateClassifier(embedding_path = '../src/outputs/embeddings_duy_full.pickle')
         self.active_name = None
-
+        self.num_of_images = 0
         container = tk.Frame(self)
         container.grid(sticky="nsew")
         container.grid_rowconfigure(0, weight=1)
@@ -171,10 +172,10 @@ class PageThree(tk.Frame):
         self.numimglabel.config(text=str("Number of images captured = "+str(x)))
 
     def trainmodel(self):
-        if self.controller.num_of_images < 300:
-            messagebox.showerror("ERROR", "No enough Data, Capture at least 300 images!")
-            return
-        train_classifer(self.controller.active_name)
+        # if self.controller.num_of_images < 10:
+        #     messagebox.showerror("ERROR", "No enough Data, Capture at least 300 images!")
+        #     return
+        train_classifer(self.controller.active_name, self.controller.recognizer)
         messagebox.showinfo("SUCCESS", "The modele has been successfully trained!")
         self.controller.show_frame("PageFour")
 
