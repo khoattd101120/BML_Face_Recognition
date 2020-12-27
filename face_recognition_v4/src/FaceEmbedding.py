@@ -111,6 +111,13 @@ if __name__ == '__main__':
     embedding_model = face_model.FaceModel(args)
     face_embedding = FaceEmbedding(embedding_model)
 
+    img_paths = glob('../dataset/train/*/*.*')
+    print(img_paths)
+    embeddings = face_embedding.embed_faces(img_paths, save=1, embedding_path='outputs/embeddings.pickle')
+
+    # Test cap image
+    # face_embedding.start_capture('a')
+
     # Test embed one image
     # img = cv2.imread('../dataset/ameliezilber/Train/img_1.jpg')
     # embedding = face_embedding.embed_face(img)
@@ -118,10 +125,3 @@ if __name__ == '__main__':
     # print(embedding)
 
     # Test embed more image
-
-    img_paths = glob('../dataset/train/*/*.*')
-    print(img_paths)
-    embeddings = face_embedding.embed_faces(img_paths, save=1, embedding_path='outputs/embeddings.pickle')
-
-    # Test cap image
-    # face_embedding.start_capture('a')
