@@ -128,4 +128,4 @@ if __name__ == "__main__":
 
     print(model.predict_proba([embedding])[0])
     print('time:', time.time() - s)
-    print(process.memory_info().rss / 10**6)
+    print('Total memory used by Python process', process.memory_info().rss / 10**6, 'MB')

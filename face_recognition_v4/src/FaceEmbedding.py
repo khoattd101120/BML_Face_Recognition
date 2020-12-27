@@ -119,7 +119,7 @@ if __name__ == '__main__':
 
     # Test embed more image
 
-    img_paths = glob('../dataset/*/*.*')
+    img_paths = glob('../dataset/train/*/*.*')
     print(img_paths)
     embeddings = face_embedding.embed_faces(img_paths, save=1, embedding_path='outputs/embeddings.pickle')
 
