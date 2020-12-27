@@ -5,16 +5,16 @@ import os
 import glob
 
 
-
 class FaceEmbedding:
     def __init__(self, face_model):
         self.face_model = face_model
         self.known_embeddings = []
         self.known_names = []
         self.root = os.getcwd()
+
     def embed_face(self, image):
         # Detect face
-        input  = self.face_model.get_input(image)
+        input = self.face_model.get_input(image)
         # print(len(bbox_face))
         # print(bbox_face[0].shape)
         if input is None:
@@ -23,7 +23,8 @@ class FaceEmbedding:
         # Get the face embedding vector
         face_embedding = self.face_model.get_feature(face)
         return bbox, face_embedding
-    def embed_faces(self, img_paths, save = None, embedding_path = None):
+
+    def embed_faces(self, img_paths, save=None, embedding_path=None):
         """
         :param img_path:
         :type img_path:
@@ -43,12 +44,13 @@ class FaceEmbedding:
             # extract the person name from the image path
             print("[INFO] processing image {}/{}".format(i + 1, l))
 
-            name = img_path.split(os.path.sep)[-3]
+            name = img_path.split(os.path.sep)[-2]
             print(name)
             # load the image
             image = cv2.imread(img_path)
+
             embed_face = self.embed_face(image)
-            if embed_face is None: #here
+            if embed_face is None:  # here
                 print('-----------------------{}'.format(name))
                 continue
             self.known_names.append(name)
@@ -63,10 +65,14 @@ class FaceEmbedding:
         else:
             if embedding_path is None:
                 raise Exception("No embedding_path specific!")
-            if save == 1: # raplace
+            embedding_path = os.path.join(self.root, '../src', embedding_path)
+            if save == 1:  # replace
                 self.save_pickle(data, embedding_path)
             elif save == 2:
                 if not os.path.exists(embedding_path):
+                    print(self.root)
+                    print(__name__, embedding_path)
+                    print(__name__, 'save 2, path not exists')
                     self.save_pickle(data, embedding_path)
                 else:
                     data = self.load_pickle(embedding_path)
@@ -74,16 +80,23 @@ class FaceEmbedding:
                     data['names'].extend(self.known_names)
                     self.save_pickle(data, embedding_path)
         return data
+
     def save_pickle(self, data, embedding_path):
+        embedding_path = os.path.join(self.root, '../src', embedding_path)
+        print(embedding_path)
         f = open(embedding_path, "wb")
         f.write(pickle.dumps(data))
         f.close()
-    def load_pickle(self,embedding_path):
+
+    def load_pickle(self, embedding_path):
+        embedding_path = os.path.join(self.root, '../src', embedding_path)
         if not os.path.exists(embedding_path):
             raise Exception("Embedding_path not exists! \n {}".format(embedding_path))
 
         else:
             return pickle.loads(open(embedding_path, "rb").read())
+
+
 if __name__ == '__main__':
     import sys
 
@@ -94,7 +107,7 @@ if __name__ == '__main__':
     from glob import glob
 
     args = Namespace(det=0, embeddings='../src/outputs/embeddings_duy.pickle', flip=0, ga_model='', gpu=0,
-                          image_size='112,112', model='../insightface/models/model-y1-test2/model,0', threshold=1.24)
+                     image_size='112,112', model='../insightface/models/model-y1-test2/model,0', threshold=1.24)
     embedding_model = face_model.FaceModel(args)
     face_embedding = FaceEmbedding(embedding_model)
 
@@ -106,8 +119,9 @@ if __name__ == '__main__':
 
     # Test embed more image
 
-    img_paths = glob('../dataset/*/Train/*.jpg')
-    embeddings = face_embedding.embed_faces(img_paths, save = 1, embedding_path= 'outputs/embeddings_duy_new.pickle')
+    img_paths = glob('../dataset/*/*.*')
+    print(img_paths)
+    embeddings = face_embedding.embed_faces(img_paths, save=1, embedding_path='outputs/embeddings.pickle')
 
-    # print(embeddings[0])
-
+    # Test cap image
+    # face_embedding.start_capture('a')

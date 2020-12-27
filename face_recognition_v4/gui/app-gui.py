@@ -1,8 +1,8 @@
 import sys
 
-sys.path.append(r'..\src')
-sys.path.append(r'..\insightface\deploy')
-sys.path.append(r'..\insightface\common')
+sys.path.append('..\src')
+sys.path.append('..\insightface\deploy')
+sys.path.append('..\insightface\common')
 
 from CreateClassifier import CreateClassifier
 
@@ -102,6 +102,7 @@ class PageOne(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        self.configure(bg="#ffffff")
         tk.Label(self, text="Enter the name", fg="#263942", font='Helvetica 12 bold').grid(row=0, column=0, pady=10,
                                                                                            padx=5)
         self.user_name = tk.Entry(self, borderwidth=3, bg="lightgrey", font='Helvetica 11')
@@ -135,6 +136,7 @@ class PageThree(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        self.configure(bg="#ffffff")
         self.numimglabel = tk.Label(self, text="Number of images captured = 0", font='Helvetica 12 bold', fg="#263942")
         self.numimglabel.grid(row=0, column=0, columnspan=2, sticky="ew", pady=10)
         self.capturebutton = tk.Button(self, text="Capture Data Set", fg="#ffffff", bg="#263942", command=self.capimg)
@@ -163,12 +165,13 @@ class PageFour(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        self.configure(bg="#ffffff")
 
         label = tk.Label(self, text="Face Recognition", font='Helvetica 16 bold')
         label.grid(row=0, column=0, sticky="ew")
         button1 = tk.Button(self, text="Face Recognition", command=self.openwebcam, fg="#ffffff", bg="#263942")
-        # button2 = tk.Button(self, text="Emotion Detection", command=self.emot, fg="#ffffff", bg="#263942")
-        # button3 = tk.Button(self, text="Gender and Age Prediction", command=self.gender_age_pred, fg="#ffffff", bg="#263942")
+        # button2 = tk.Button(self, text="Emotion Detection", command=self.emot, fg="#ffffff", bg="#263942") button3
+        # = tk.Button(self, text="Gender and Age Prediction", command=self.gender_age_pred, fg="#ffffff", bg="#263942")
         button4 = tk.Button(self, text="Go to Home Page", command=lambda: self.controller.show_frame("StartPage"),
                             bg="#ffffff", fg="#263942")
         button1.grid(row=1, column=0, sticky="ew", ipadx=5, ipady=4, padx=10, pady=10)

@@ -75,4 +75,4 @@ def start_capture(name, recognizer):
 
 
 if __name__ == '__main__':
-    start_capture('ahihi', 's')
+    start_capture()
