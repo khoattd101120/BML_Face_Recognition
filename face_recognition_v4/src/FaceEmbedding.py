@@ -106,14 +106,14 @@ if __name__ == '__main__':
     from Namespace import Namespace
     from glob import glob
 
-    args = Namespace(det=0, embeddings='../src/outputs/embeddings_duy.pickle', flip=0, ga_model='', gpu=0,
+    args = Namespace(det=0, embeddings='../src/outputs/embeddings_alpha.pickle', flip=0, ga_model='', gpu=0,
                      image_size='112,112', model='../insightface/models/model-y1-test2/model,0', threshold=1.24)
     embedding_model = face_model.FaceModel(args)
     face_embedding = FaceEmbedding(embedding_model)
 
     img_paths = glob('../dataset/train/*/*.*')
     print(img_paths)
-    embeddings = face_embedding.embed_faces(img_paths, save=1, embedding_path='outputs/embeddings.pickle')
+    embeddings = face_embedding.embed_faces(img_paths, save=1, embedding_path='outputs/embeddings_alpha.pickle')
 
     # Test cap image
     # face_embedding.start_capture('a')

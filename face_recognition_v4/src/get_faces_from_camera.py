@@ -1,4 +1,5 @@
 import sys
+
 sys.path.append('../insightface/deploy')
 sys.path.append('../insightface/src/common')
 
@@ -42,9 +43,9 @@ while faces < max_faces:
         max_area = 0
         for bboxe in bboxes:
             bbox = bboxe["box"]
-            bbox = np.array([bbox[0], bbox[1], bbox[0]+bbox[2], bbox[1]+bbox[3]])
+            bbox = np.array([bbox[0], bbox[1], bbox[0] + bbox[2], bbox[1] + bbox[3]])
             keypoints = bboxe["keypoints"]
-            area = (bbox[2]-bbox[0])*(bbox[3]-bbox[1])
+            area = (bbox[2] - bbox[0]) * (bbox[3] - bbox[1])
             if area > max_area:
                 max_bbox = bbox
                 landmarks = keypoints
@@ -52,19 +53,21 @@ while faces < max_faces:
 
         max_bbox = max_bbox[0:4]
 
-
         # get each of 3 frames
-        if frames%3 == 0:
+        if frames % 3 == 0:
             # convert to face_preprocess.preprocess input
-            landmarks = np.array([landmarks["left_eye"][0], landmarks["right_eye"][0], landmarks["nose"][0], landmarks["mouth_left"][0], landmarks["mouth_right"][0],
-                                 landmarks["left_eye"][1], landmarks["right_eye"][1], landmarks["nose"][1], landmarks["mouth_left"][1], landmarks["mouth_right"][1]])
-            landmarks = landmarks.reshape((2,5)).T
+            landmarks = np.array(
+                [landmarks["left_eye"][0], landmarks["right_eye"][0], landmarks["nose"][0], landmarks["mouth_left"][0],
+                 landmarks["mouth_right"][0],
+                 landmarks["left_eye"][1], landmarks["right_eye"][1], landmarks["nose"][1], landmarks["mouth_left"][1],
+                 landmarks["mouth_right"][1]])
+            landmarks = landmarks.reshape((2, 5)).T
             nimg = face_preprocess.preprocess(frame, max_bbox, landmarks, image_size='112,112')
-            if not(os.path.exists(args["output"])):
+            if not (os.path.exists(args["output"])):
                 os.makedirs(args["output"])
-            cv2.imwrite(os.path.join(args["output"], "{}.jpg".format(faces+1)), nimg)
+            cv2.imwrite(os.path.join(args["output"], "{}.jpg".format(faces + 1)), nimg)
             cv2.rectangle(frame, (max_bbox[0], max_bbox[1]), (max_bbox[2], max_bbox[3]), (255, 0, 0), 2)
-            print("[INFO] {} faces detected".format(faces+1))
+            print("[INFO] {} faces detected".format(faces + 1))
             faces += 1
     cv2.imshow("Face detection", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):

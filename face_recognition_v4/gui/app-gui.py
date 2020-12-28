@@ -1,8 +1,8 @@
 import sys
 
-sys.path.append('..\src')
-sys.path.append('..\insightface\deploy')
-sys.path.append('..\insightface\common')
+sys.path.append(r'..\src')
+sys.path.append(r'..\insightface\deploy')
+sys.path.append(r'..\insightface\common')
 
 from CreateClassifier import CreateClassifier
 
@@ -28,7 +28,7 @@ class MainUI(tk.Tk):
             for i in z:
                 names.add(i)
         self.title_font = tkfont.Font(family='Helvetica', size=16, weight="bold")
-        self.title("Face Recognizer")
+        self.title("VinBDI Face Recognition")
         self.resizable(False, False)
         self.geometry("500x250")
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
@@ -156,7 +156,7 @@ class PageThree(tk.Frame):
         #     messagebox.showerror("ERROR", "No enough Data, Capture at least 300 images!")
         #     return
         train_classifer(self.controller.active_name, self.controller.recognizer)
-        messagebox.showinfo("SUCCESS", "The modele has been successfully trained!")
+        messagebox.showinfo("SUCCESS", "The model has been successfully trained!")
         self.controller.show_frame("PageFour")
 
 
