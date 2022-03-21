@@ -4,6 +4,12 @@ import cv2
 import time
 
 
+
+
+
+
+
+
 def start_capture(name, recognizer):
     s = time.time()
     cap = cv2.VideoCapture(0)

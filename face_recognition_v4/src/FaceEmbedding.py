@@ -50,8 +50,9 @@ class FaceEmbedding:
             image = cv2.imread(img_path)
 
             embed_face = self.embed_face(image)
+
             if embed_face is None:  # here
-                print('-----------------------{}'.format(name))
+                print('-----------------------{}'.format(img_path))
                 continue
             self.known_names.append(name)
             self.known_embeddings.append(embed_face[1])
@@ -106,14 +107,16 @@ if __name__ == '__main__':
     from Namespace import Namespace
     from glob import glob
 
-    args = Namespace(det=0, embeddings='../src/outputs/embeddings_alpha.pickle', flip=0, ga_model='', gpu=0,
+    # args = Namespace(det=0, embeddings=None, flip=0, ga_model='', gpu=0,
+    #                  image_size='112,112', model=r'C:\Users\Khoa\Desktop\BML_Face_Recognition\face_recognition_v4\src\newmodels\face_recognition_mv.pkl,0', threshold=1.24)
+    args = Namespace(det=0, embeddings=None, flip=0, ga_model='', gpu=0,
                      image_size='112,112', model='../insightface/models/model-y1-test2/model,0', threshold=1.24)
     embedding_model = face_model.FaceModel(args)
     face_embedding = FaceEmbedding(embedding_model)
 
     img_paths = glob('../dataset/train/*/*.*')
     print(img_paths)
-    embeddings = face_embedding.embed_faces(img_paths, save=1, embedding_path='outputs/embeddings_alpha.pickle')
+    embeddings = face_embedding.embed_faces(img_paths, save=1, embedding_path='outputs/testmodelv1.pickle')
 
     # Test cap image
     # face_embedding.start_capture('a')

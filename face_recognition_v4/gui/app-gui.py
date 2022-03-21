@@ -32,7 +32,7 @@ class MainUI(tk.Tk):
         self.resizable(False, False)
         self.geometry("500x250")
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
-        self.recognizer = CreateClassifier(embedding_path='../src/outputs/embeddings_duy_full.pickle')
+        self.recognizer = CreateClassifier(embedding_path='../src/outputs/testmodelv1.pickle')
         self.active_name = None
         self.num_of_images = 0
         container = tk.Frame(self)
